@@ -14,4 +14,3 @@ Ahmedabad<br/>
   <a href="https://github.com/mjrulesamrat"><i class="fab fa-github"></i> mjrulesamrat</a> - 
   <a href="https://twitter.com/mjrulesamrat"><i class="fab fa-twitter"></i> @mjrulesamrat</a>
 </div>
-
