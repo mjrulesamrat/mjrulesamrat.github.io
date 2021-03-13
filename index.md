@@ -3,11 +3,10 @@ layout: cv
 title: Jay Modi's CV
 ---
 # Jay Modi
-Analyst Programmer, [Gateway Group of companies](https://thegatewaycorp.com)
 
 Professional Python Django Flask Developer.
 
-Currently fiddling with AI/ML algorithms, Google Cloud and AWS.
+Currently fiddling with Microservices, Kubernetes and Google Cloud.
 
 Had worked on Ethereum and Blockchain technologies.
 
