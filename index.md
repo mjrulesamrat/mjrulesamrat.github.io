@@ -1,16 +1,18 @@
 ---
 layout: cv
-title: Jay Modi's CV
+title: Jay Modi
 ---
 # Jay Modi
 
-Professional Python Django Flask Developer.
+Currently, CTO at Aptologics Pvt Ltd.
 
-Currently fiddling with Microservices, Kubernetes and Google Cloud.
+Solving Data & AI Challenges for Enterprises.
 
-Had worked on Ethereum and Blockchain technologies.
+Building Enterprise AI Analytics product at a Stealth Startup.
 
-Follows standard PEP8 coding styles and industry's best practices.
+Professional Python Django/Flask/FastAPI Developer.
+
+Loves to fiddle with Microservices, Kubernetes and distributed tracing.
 
 Always feel motivated by this poem written by late great poet Robert Frost.
 "Woods are Lovely Dark and Deep,
@@ -28,6 +30,3 @@ Ahmedabad<br/>
   <a href="https://twitter.com/mjrulesamrat" title="Jay Modi | Twitter"><i class="fab fa-twitter"></i> @mjrulesamrat</a> -
   <a href="https://linkedin.com/in/mjrulesamrat" title="Jay Modi | Linkedin"><i class="fab fa-linkedin"></i> Jay Modi</a>
 </div>
-
-<script src="https://app.wotnot.io/chat-widget/B62DGUvB8cPb012319736028Z2NpgDKB.js" defer></script>
-
