@@ -1,7 +1,3 @@
----
-layout: cv
-title: Jay Modi
----
 # Jay Modi
 
 Currently, CTO at Aptologics Pvt Ltd.
@@ -26,6 +22,7 @@ Ahmedabad<br/>
 
 <div id="webaddress">
   <a href="https://mjrulesamrat.github.io" title="Jay Modi | Home"><i class="fas fa-home"></i> home</a> -
+  <a href="blog/" title="Jay Modi | Blog"><i class="fas fa-pencil-alt"></i> blog</a> -
   <a href="https://github.com/mjrulesamrat" title="Jay Modi | GitHub"><i class="fab fa-github"></i> mjrulesamrat</a> -
   <a href="https://twitter.com/mjrulesamrat" title="Jay Modi | Twitter"><i class="fab fa-twitter"></i> @mjrulesamrat</a> -
   <a href="https://linkedin.com/in/mjrulesamrat" title="Jay Modi | Linkedin"><i class="fab fa-linkedin"></i> Jay Modi</a>

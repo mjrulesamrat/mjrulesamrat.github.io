@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | Jay Modi</title>
+  <meta name="description" content="Notes on data, AI, Python and distributed systems by Jay Modi." />
+  <link rel="icon" href="../favicon.ico" />
+  <link href="../media/blog.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">Jay Modi</a>
+      <nav><a href="../">Profile</a><a href="./">Blog</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <h1>Jay Modi's Blog</h1>
+      <p>Notes on data, AI, Python and distributed systems.</p>
+    </section>
+    <ul class="post-list" id="posts"></ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">&copy; Jay Modi &middot; <a href="https://github.com/mjrulesamrat">GitHub</a> &middot; <a href="https://linkedin.com/in/mjrulesamrat">LinkedIn</a></div>
+  </footer>
+
+  <script>
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+
+    function formatDate(iso) {
+      return new Date(iso + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+
+    fetch('posts.json')
+      .then(function (res) { return res.json(); })
+      .then(function (posts) {
+        // Posts dated in the future stay hidden until that day, so drafts can be queued ahead.
+        var now = new Date();
+        var today = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+        posts = posts.filter(function (p) { return p.date <= today; });
+        posts.sort(function (a, b) { return b.date.localeCompare(a.date); });
+        var list = document.getElementById('posts');
+        if (!posts.length) {
+          list.innerHTML = '<li class="empty">No posts yet.</li>';
+          return;
+        }
+        list.innerHTML = posts.map(function (p) {
+          return '<li><a class="post-card" href="' + encodeURIComponent(p.slug) + '/">' +
+            '<h2>' + escapeHtml(p.title) + '</h2>' +
+            '<p class="post-subtitle">' + escapeHtml(p.subtitle || '') + '</p>' +
+            '<div class="meta">' + escapeHtml(p.author) + ' &middot; ' +
+            '<time datetime="' + p.date + '">' + formatDate(p.date) + '</time></div>' +
+            '</a></li>';
+        }).join('');
+      });
+  </script>
+</body>
+</html>
